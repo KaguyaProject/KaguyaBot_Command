@@ -4,9 +4,8 @@ Chào mừng bạn đến với kho lưu trữ này! Đây là nơi tập trung 
 
 ## Danh Sách Plugin
 
-1. **[CMD]:** Dùng để load lại 1 hoặc toàn bộ plugins
-  <img src="https://github.com/KaguyaProject/KaguyaBot_Command/assets/87187870/2049b399-7f94-4183-a241-41894f0aee08">
-
+1. **[CMD]:** Dùng để load lại 1 hoặc toàn bộ plugins!
+2. **[Circle]:** Dùng để cắt hình ảnh avatar của bạn hoặc người khác thành hình tròn!
 
 ## Ý Kiến Phản Hồi
 
