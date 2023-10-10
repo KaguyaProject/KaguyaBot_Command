@@ -6,6 +6,7 @@ Chào mừng bạn đến với kho lưu trữ này! Đây là nơi tập trung 
 
 1. **[CMD]:** Dùng để load lại 1 hoặc toàn bộ plugins!
 2. **[Circle]:** Dùng để cắt hình ảnh avatar của bạn hoặc người khác thành hình tròn!
+3. **[CatGPT]:** Dùng để hỏi những câu hỏi về gì đó nếu bạn muốn như ChatGPT sẽ update thêm vài plugins về AI!
 
 ## Ý Kiến Phản Hồi
 
