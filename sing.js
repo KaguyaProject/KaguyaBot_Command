@@ -19,7 +19,7 @@ class Sing {
       const KeywordsOrLink = args.join(" ");
       const isYouTube = this.isYouTubeLink(KeywordsOrLink);
       if (!KeywordsOrLink && !isYouTube) {
-        return kaguya.reply("Vui lòng nhập từ khoá hoặc link video !");
+        return kaguya.reply("Vui lòng nhập từ khoá hoặc link nhạc !");
       }
       if (!isYouTube) {
         const {
@@ -32,13 +32,13 @@ class Sing {
         let sequenceNumber = 1;
         for (let i = 0; i < results.length && i <= 10; i++) {
           const result = results[i];
-          const video = result.video;
-          if (video && video.title) {
-            const durationInSeconds = this.parseDurationInSeconds(video.duration);
+          const music = result.video;
+          if (music && music.title) {
+            const durationInSeconds = this.parseDurationInSeconds(music.duration);
             if (durationInSeconds > 1 * 60 * 60) {
               continue;
             }
-            message += `${sequenceNumber}. ${video.title}\nĐộ dài : ${video.duration}\nThời gian đăng : ${video.upload_date}\n\n`;
+            message += `${sequenceNumber}. ${music.title}\nĐộ dài : ${music.duration}\nThời gian đăng : ${music.upload_date}\n\n`;
             const path = `./cache/other/sing_${event.senderID}_${Math.random()}.jpg`;
             const { data: img } = await axios.get(result.video.thumbnail_src, {
               responseType: "arraybuffer",
@@ -59,32 +59,32 @@ class Sing {
             client.handler.reply.set(callback.messageID, {
               name: this.name,
               author: event.senderID,
-              videoData: this.getImg[2],
+              musicData: this.getImg[2],
               type: "choose",
             });
             this.getImg[1].forEach((link) => fs.unlinkSync(link));
           }
         );
       } else {
-        await this.downloadVideo(api, event, KeywordsOrLink);
+        await this.downloadMusic(api, event, KeywordsOrLink);
       }
     } catch (err) {
       console.log(err);
     }
   }
-  async downloadVideo(api, event, url, title = "") {
+  async downloadMusic(api, event, url, title = "") {
     const path = `./cache/other/sing_${Math.random()}.mp3`;
     try {
       await new Promise((resolve, reject) => {
-        const videoStream = ytdl(url, {
+        const musicStream = ytdl(url, {
           quality: "lowestaudio",
         });
         const writeStream = fs.createWriteStream(path);
-        videoStream.on("end", resolve);
-        videoStream.on("error", (error) => {
+        musicStream.on("end", resolve);
+        musicStream.on("error", (error) => {
           reject(error);
         });
-        videoStream.pipe(writeStream);
+        musicStream.pipe(writeStream);
       });
       api.sendMessage(
         {
@@ -102,17 +102,17 @@ class Sing {
       );
     } catch (err) {
       console.error(err);
-      return kaguya.reply("Đã xảy ra lỗi, không thể tải video !");
+      return kaguya.reply("Đã xảy ra lỗi, không thể tải nhạc !");
     }
   }
   async onReply({ api, event, reply }) {
     if (reply.type === "choose") {
       const chooseIndex = parseInt(event.body - 1);
-      if (isNaN(chooseIndex) || chooseIndex < 0 || chooseIndex >= reply.videoData.length) {
+      if (isNaN(chooseIndex) || chooseIndex < 0 || chooseIndex >= reply.musicData.length) {
         return kaguya.reply("Lựa chọn không hợp lệ!");
       }
-      const selectedVideoData = reply.videoData[chooseIndex];
-      await this.downloadVideo(api, event, selectedVideoData.video.url, selectedVideoData.video.title);
+      const selectedMusicData = reply.musicData[chooseIndex];
+      await this.downloadMusic(api, event, selectedMusicData.video.url, selectedMusicData.video.title);
     }
   }
 }
