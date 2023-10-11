@@ -7,14 +7,11 @@ class Sing {
   cooldowns = 10;
   description = "Có lẽ là nghe nhạc trên messenger ?";
   role = "member";
-  aliases = ["img"];
+  aliases = ["audio", "mp3", "music"];
   getImg = [[], [], []];
   isYouTubeLink = (url) => /^(https?:\/\/)?(www\.)?(youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/.test(url);
   parseDurationInSeconds(duration) {
-    const parts = duration.split(":").map((part) => parseInt(part));
-    const seconds = parts.pop() || 0;
-    const minutes = parts.pop() || 0;
-    const hours = parts.pop() || 0;
+    const [hours, minutes, seconds] = duration.split(':').map(part => parseInt(part) || 0);
     return hours * 3600 + minutes * 60 + seconds;
   }
   async execute({ api, event, args }) {
