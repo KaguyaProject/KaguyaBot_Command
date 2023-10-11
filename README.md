@@ -4,8 +4,9 @@ Chào mừng bạn đến với kho lưu trữ này! Đây là nơi tập trung 
 
 ## Danh Sách Plugin
 
-1. **[CMD]:** Dùng để load lại 1 hoặc toàn bộ plugins!
-2. **[Circle]:** Dùng để cắt hình ảnh avatar của bạn hoặc người khác thành hình tròn!
+1. **[CMD]:** Dùng để load lại 1 hoặc toàn bộ plugins! (This command is used for reloading one or all plugins!)
+2. **[Circle]:** Dùng để cắt hình ảnh avatar của bạn hoặc người khác thành hình tròn! (Cut your or someone else's avatar into a circle using it!)
+3. .....
 
 ## Ý Kiến Phản Hồi
 
