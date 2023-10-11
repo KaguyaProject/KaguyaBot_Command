@@ -9,6 +9,7 @@ Hello and welcome to this archive! This is where many different individuals writ
 1. **[CMD]:** Dùng để load lại 1 hoặc toàn bộ plugins! (This command is used for reloading one or all plugins!)
 2. **[Circle]:** Dùng để cắt hình ảnh avatar của bạn hoặc người khác thành hình tròn! (Cut your or someone else's avatar into a circle using it!)
 3. **[CatGPT]:** Dùng để hỏi những câu hỏi về gì đó nếu bạn muốn như ChatGPT sẽ update thêm vài plugins về AI!
+4. **[Sing]:** Dùng để nghe nhạc trên messenger!
 
 ## Ý Kiến Phản Hồi
 ### Vi
