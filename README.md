@@ -1,6 +1,8 @@
 # Kho Lưu Trữ Plugin
-
+### Vi
 Chào mừng bạn đến với kho lưu trữ này! Đây là nơi tập trung các plugin được viết bởi nhiều người khác nhau. Cùng khám phá bộ sưu tập đa dạng này, mỗi plugin được tạo ra với sự tỉ mỉ để mở rộng và nâng cao tính năng của nhiều ứng dụng và nền tảng khác nhau.
+### Eng
+Hello and welcome to this archive! This is where many different individuals write plugins. Investigate this interesting collection. Each plugin is built using technologies to expand and improve the capabilities of numerous apps and platforms.
 
 ## Danh Sách Plugin
 
